@@ -12,3 +12,7 @@ def test2():
 	obs=countBases(testSequence1)	
 	exp=NotImplemented
 	assert obs==exp
+	
+def test3():
+	fakematrix=[["namn1",0.04,0.04,0.04,0.04,0.04,0.04,0.04],["namn2",0.03,0.03,0.03,0.03,0.03,0.03,0.03]]
+	printMatrix(fakematrix)

@@ -1,5 +1,5 @@
 import math
-
+import argparse
 
 def calculateDist(array1, array2):
 	#Sanity check input
@@ -34,3 +34,35 @@ def countBases(sequence):
 
 	return baselist
 
+def printMatrix(matrix):
+	for row in matrix:
+		if len(row[0]) > 10:
+			row[0]=row[0][0:10]
+		elif len(row[0]) < 10:
+			row[0]=row[0]+' '*(10-len(row[0])) #Check if name is shorter than 10 characters, in that case add 10-len(row[0]) number of ' ' characters
+		for i in range(0,len(row)):
+			outputString = "%s\t" % (row[i])
+			print(outputString) 
+
+#-------------------------main---------------------
+parser = argparse.ArgumentParser(description='Process list of files.')
+parser.add_argument('files', type=str, nargs='+',
+                    help='filenames')
+args = parser.parse_args()
+print(args.files)
+
+sequenceData=[]
+for i in args.files:
+	sequence = file_to_seq(i)
+	nucleotideComposition=countBases(sequence[1])
+	sequencedata.append([sequence[0],sequence[1],nucleotideComposition])
+
+matrix=[]
+for y in sequenceData:
+	row=[]
+	row.append(y[0])
+	for x in sequenceData:
+		row.append(calculateDist(y[2],x[2]))
+	matrix.append(row)
+
+printMatrix(matrix)

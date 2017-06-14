@@ -3,3 +3,9 @@ Input en lista av filer
 2. Räkna ut antal A, G, C, T i en given sekvens [A/(A+G+T+C), G/(), C... , T... ]
 3. Givet två arrays räknar ut avståndet
 4. Funktion som bygger avståndsmatrisen
+
+
+if len(sys.argv)>1
+	
+else 
+	sys.stdin

@@ -1,0 +1,5 @@
+Input en lista av filer
+1. Funktion som öppnar fil och ouput string innehållande sekvensen
+2. Räkna ut antal A, G, C, T i en given sekvens [A/(A+G+T+C), G/(), C... , T... ]
+3. Givet två arrays räknar ut avståndet
+4. Funktion som bygger avståndsmatrisen

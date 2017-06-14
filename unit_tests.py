@@ -7,3 +7,8 @@ def test1():
 	exp = 0.05
 	assert obs == exp
 
+def test2():
+	testSequence1='AAGFTTCC'
+	obs=countBases(testSequence1)	
+	exp=NotImplemented
+	assert obs==exp
